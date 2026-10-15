@@ -1,0 +1,16 @@
+Biomedical Dataset Studio
+Copyright 2026 Kiran Upadhyay
+SPDX-License-Identifier: Apache-2.0
+
+This distribution contains the standalone Studio implementation and selected
+processing helpers extracted from the maintainer's biomedical research prototype.
+Extraction, packaging and standalone configuration changes were made in 2026.
+Original source provenance is recorded in docs/SOURCE_PROVENANCE.json.
+
+Third-party dependencies are installed separately and retain their respective
+licenses and copyright notices. No third-party package source, model weights or
+biomedical article bodies are included in this source distribution.
+
+Downloaded biomedical articles retain their respective licenses. The software
+license does not license article content, model weights, or third-party software.
+This project is not endorsed by NCBI, NLM, NIH or the Apache Software Foundation.

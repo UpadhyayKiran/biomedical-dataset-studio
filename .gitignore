@@ -1,0 +1,47 @@
+# SPDX-FileCopyrightText: 2026 Kiran Upadhyay
+# SPDX-License-Identifier: Apache-2.0
+
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.toml
+.streamlit/secrets.toml
+# Generated data, downloaded literature, weights and caches
+workspace/
+data/
+datasets/
+downloads/
+models/
+logs/
+*.pdf
+*.jsonl
+*.csv
+*.zip
+*.tar*
+*.index
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.log
+.cache/
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db

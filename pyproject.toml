@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: 2026 Kiran Upadhyay
+# SPDX-License-Identifier: Apache-2.0
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "biomedical-dataset-studio"
+version = "1.0.0"
+description = "A local, CPU-friendly studio for traceable PMC biomedical datasets."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "Kiran Upadhyay"}]
+dependencies = ["requests>=2.31,<3", "streamlit>=1.49,<2"]
+
+[project.optional-dependencies]
+pdf = ["pymupdf>=1.24,<2"]
+index = ["numpy>=1.26", "faiss-cpu>=1.8", "sentence-transformers>=5.1,<5.2", "transformers>=4.41,<5"]
+test = ["pytest>=8,<9"]
+
+[project.scripts]
+biomedical-dataset-studio = "biomedical_dataset_studio.pipeline:main"
+
+[project.urls]
+Homepage = "https://github.com/UpadhyayKiran/biomedical-dataset-studio"
+Issues = "https://github.com/UpadhyayKiran/biomedical-dataset-studio/issues"
+
+[tool.setuptools.packages.find]
+include = ["biomedical_dataset_studio*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

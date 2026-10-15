@@ -1,0 +1,94 @@
+{
+  "copyright": "2026 Kiran Upadhyay",
+  "license": "Apache-2.0",
+  "source_project": "Biomedical-RAG-Research-Assistant",
+  "authorization": "Maintainer ownership declaration in source-project licensing/attribution documents and explicit instruction to publish this extraction under Apache-2.0. No third-party ownership is inferred.",
+  "files": [
+    {
+      "source": "biomedical_rag/dataset_studio.py",
+      "source_sha256": "470cf30f14ffc22ccc874fa4503971386770b07cd92f074710dcd4052da4f860",
+      "destination": "biomedical_dataset_studio/pipeline.py",
+      "changes": "Standalone import names and SPDX attribution; PDF dependency discovery no longer requires unused pandas."
+    },
+    {
+      "source": "biomedical_rag/studio_support.py",
+      "source_sha256": "aed4b3c8c2f3ae779210015ee70a4f9af57c651dc58fcacbd58c9b0c6844a72e",
+      "destination": "biomedical_dataset_studio/studio_support.py",
+      "changes": "Standalone import names and SPDX attribution; PDF dependency discovery no longer requires unused pandas."
+    },
+    {
+      "source": "biomedical_rag/studio_ui.py",
+      "source_sha256": "335cb02105177188915082b909cc36b1d6b82364d6fc912081dcc08d542d6643",
+      "destination": "biomedical_dataset_studio/studio_ui.py",
+      "changes": "Standalone import names and SPDX attribution; PDF dependency discovery no longer requires unused pandas."
+    },
+    {
+      "source": "biomedical_rag/create_chunks.py",
+      "source_sha256": "1adece9997e218f5ae5ae037634285c7ef167d806ac892f747948f2b0579c718",
+      "destination": "biomedical_dataset_studio/chunking.py",
+      "functions": [
+        "clean_chunk_text",
+        "split_text_into_chunks",
+        "is_table_heavy",
+        "is_low_information_chunk",
+        "normalize_for_duplicate_check"
+      ],
+      "changes": "Selected only required functions/constants; removed unrelated batch execution and import-time directory creation."
+    },
+    {
+      "source": "biomedical_rag/pmc_search_and_collect.py",
+      "source_sha256": "b12bf07782dc7c0a94858cd5b31cb8b2f02aec484f23d53b163e4de38e3c14b8",
+      "destination": "biomedical_dataset_studio/pmc_xml.py",
+      "functions": [
+        "strip_namespace",
+        "normalize",
+        "text",
+        "get_title",
+        "get_journal",
+        "get_pmid"
+      ],
+      "changes": "Selected only required functions/constants; removed unrelated batch execution and import-time directory creation."
+    },
+    {
+      "source": "biomedical_rag/preprocessing_final.py",
+      "source_sha256": "f4a73de605311a96ffdb65fa5e924e1ec4086ec7cd6c587f1d09cc3d8c47b6f8",
+      "destination": "biomedical_dataset_studio/pdf_processing.py",
+      "functions": [
+        "normalize_text",
+        "cleanup_section_text",
+        "identify_heading",
+        "split_into_sections"
+      ],
+      "changes": "Selected only required functions/constants; removed unrelated batch execution and import-time directory creation."
+    },
+    {
+      "source": "biomedical_rag/create_faiss_index.py",
+      "source_sha256": "e9b3f26d91cbfec89bcdacf06bdb9a2fee6886158a2fe03e3d8cf6eee0678322",
+      "destination": "biomedical_dataset_studio/indexing.py",
+      "functions": [
+        "create_faiss_index"
+      ],
+      "changes": "Selected only required functions/constants; removed unrelated batch execution and import-time directory creation."
+    },
+    {
+      "source": "tests/test_dataset_studio.py",
+      "source_sha256": "ed7e821bd83b876f2ba88e9dcb48a5236dc62d849f73f78421ffc6be66de63e1",
+      "destination": "tests/test_dataset_studio.py",
+      "changes": "Standalone imports/environment names and optional-dependency skips; assertions otherwise retained."
+    },
+    {
+      "source": "tests/test_studio_app.py",
+      "source_sha256": "0be78e9b65c8ea18520cbdab5803e18e6c9aa854d817f241e8960449bbd545fc",
+      "destination": "tests/test_studio_app.py",
+      "changes": "Standalone imports/environment names and optional-dependency skips; assertions otherwise retained."
+    },
+    {
+      "source": "tests/test_studio_release_regressions.py",
+      "source_sha256": "e55b85c5f54a91b266623ce73407ed960a15bff750b1955caf4a378ad3fff3b9",
+      "destination": "tests/test_studio_release_regressions.py",
+      "changes": "Standalone imports/environment names and optional-dependency skips; assertions otherwise retained."
+    }
+  ],
+  "apache_license_source": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+  "apache_license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+}

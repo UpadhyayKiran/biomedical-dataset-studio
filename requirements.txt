@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Kiran Upadhyay
+# SPDX-License-Identifier: Apache-2.0
+
+requests>=2.31,<3
+streamlit>=1.49,<2

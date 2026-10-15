@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Kiran Upadhyay
+# SPDX-License-Identifier: Apache-2.0
+
+include LICENSE NOTICE THIRD_PARTY_NOTICES.md
+include dataset_studio_app.py README.md .env.example requirements.txt requirements-dev.txt
+recursive-include docs *.md *.json
+recursive-include tests *.py
